@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import "./assets/styles/constants.scss";
+
+html {
+  height: 100vh;
+}
+
+body,
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  color: $base-color;
+
+}
+
+.accent-text {
+  color: $accent-color;
+  font-weight: 700;
+  letter-spacing: 0.17rem;
+}
+
+.contrast-text {
+  color: $contrast-color;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.revealed-block {
+  display: block;
+}
+
+.active {
+  color: $accent-color;
+  font-weight: bold;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.untouchable {
+  cursor: default;
+}
+
+.interactible {
+  color: $disabled-color;
+  font-size: 1rem;
+  transition: 150ms ease-in-out;
+}
+
+.interactible:hover {
+  font-size: 1.3rem;
+  color: $accent-color;
+}
+
+.icon-label-pair {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .icon-label {
+    margin: 5px;
+  }
+
+  i {
+    margin: 5px;
+  }
+}
+
+.flex-list-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

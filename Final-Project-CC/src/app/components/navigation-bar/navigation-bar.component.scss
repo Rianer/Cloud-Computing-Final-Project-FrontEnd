@@ -1,0 +1,58 @@
+@import "../../../assets/styles/constants.scss";
+
+.navigation-sidebar {
+  position: fixed;
+
+  ul {
+    color: $secondary-color;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    min-width: 50px;
+    width: 4rem;
+    height: 100vh;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color-dark;
+    transition: 120ms ease-in;
+
+    li {
+      height: 2rem;
+      padding: 2rem;
+      transition: ease-in-out 300ms;
+
+      .icon-label {
+        display: none;
+      }
+
+      i {
+        font-size: 2rem;
+      }
+    }
+
+    li:last-child {
+      justify-self: flex-end;
+    }
+
+    li:hover {
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.navigation-sidebar:hover {
+  ul {
+    width: 10rem;
+
+    li {
+      .icon-label {
+        display: block;
+      }
+    }
+  }
+
+
+}
