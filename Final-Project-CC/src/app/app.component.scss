@@ -4,6 +4,9 @@
   margin-left: 7rem;
   padding-top: 1rem;
   width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .top-bar {

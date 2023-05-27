@@ -67,3 +67,75 @@
     color: $contrast-color;
   }
 }
+
+.tables-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4rem;
+  min-height: 55vh;
+
+  .table-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    // background-color: $pasive-background;
+    border: 1px solid $active-background;
+    height: 55vh;
+    border-radius: 15px;
+    padding-top: 1rem;
+  }
+
+  .orders-container {
+    width: 80%;
+    margin-right: 2rem;
+  }
+
+  .clients-container {
+    width: 40%;
+    margin-left: 2rem;
+  }
+
+  .info-table {
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    padding: 1rem 0.5rem;
+    border-collapse: collapse;
+
+    .header-row {
+      border-bottom: 1px solid $contrast-color;
+
+      th {
+        padding-bottom: 0.4rem;
+      }
+    }
+
+    td {
+      font-size: 1rem;
+      padding: 1rem 0;
+      transition: 150ms ease-in-out;
+    }
+
+    tr {
+      transition: 150ms ease-in-out;
+    }
+
+
+    tr:hover {
+      background-color: $pasive-background;
+
+      td {
+        color: $accent-color
+      }
+    }
+  }
+
+
+
+}
+
+.drop-shadow-light {
+  box-shadow: 2px 2px 3px $active-background;
+}
