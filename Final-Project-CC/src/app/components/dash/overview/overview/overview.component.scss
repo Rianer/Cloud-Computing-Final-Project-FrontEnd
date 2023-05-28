@@ -144,12 +144,17 @@
     tr:hover {
       background-color: $pasive-background;
 
-      td {
-        color: $accent-color
-      }
     }
   }
 
 
 
+}
+
+.clickable {
+  transition: 150ms;
+}
+
+.clickable:hover {
+  color: $accent-color;
 }

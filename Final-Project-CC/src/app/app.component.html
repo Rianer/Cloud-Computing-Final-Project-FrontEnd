@@ -20,7 +20,7 @@
   <div class="title-bar">
     <div class="title accent-text untouchable">Drones</div>
     <div class="controls clickable">
-      <i class="fa-solid fa-circle-plus"></i>
+      <i (click)="refreshDashData()" class="fa-solid fa-arrows-rotate"></i>
     </div>
   </div>
   <div class="drone-list-container">
@@ -29,14 +29,9 @@
       <div class="status-col col">Status</div>
       <div class="info-col col">Info</div>
     </div>
-    <div class="drone-details list-row">
-      <div class="id-col col">d123</div>
-      <div class="status-col col">Delivering</div>
-      <div class="info-col col"><i class="fa-solid fa-circle-info"></i></div>
-    </div>
-    <div class="drone-details list-row">
-      <div class="id-col col">d123</div>
-      <div class="status-col col">Delivering</div>
+    <div *ngFor="let drone of droneList" class="drone-details list-row">
+      <div class="id-col col">d-{{ drone.id }}</div>
+      <div class="status-col col">{{ drone.status }}</div>
       <div class="info-col col"><i class="fa-solid fa-circle-info"></i></div>
     </div>
   </div>

@@ -44,13 +44,20 @@
         <tr class="header-row">
           <th>Status</th>
           <th>Id</th>
-          <th>Address</th>
-          <th>Control</th>
+          <th>Delivery Time</th>
+          <th>User Id</th>
+          <th class="clickable">
+            <i
+              (click)="refreshDashData()"
+              class="fa-solid fa-arrows-rotate"
+            ></i>
+          </th>
         </tr>
-        <tr>
-          <td>On Route</td>
-          <td>#123456</td>
-          <td>Brown Street, London</td>
+        <tr *ngFor="let order of orderList">
+          <td>{{ order.status }}</td>
+          <td>#{{ order.id }}</td>
+          <td>{{ order.estimatedDeliveryTime }}</td>
+          <td>u-{{ order.userId }}</td>
           <td class="clickable">Cancel</td>
         </tr>
       </table>
@@ -62,11 +69,11 @@
           <th>Name</th>
           <th>More</th>
         </tr>
-        <tr>
+        <tr *ngFor="let user of usersList">
           <td class="profile-img">
             <img src="../../../../../assets/images/blank-profile-picture.jpg" />
           </td>
-          <td>John Doe</td>
+          <td>{{ user.username }}</td>
           <td class="clickable">Info</td>
         </tr>
       </table>
